@@ -1,0 +1,12 @@
+{
+  "name": "@quantum-sec/template-docker-container",
+  "version": "0.0.0-development",
+  "private": true,
+  "description": "{{package_description}}",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:quantum-sec/template-docker-container.git"
+  },
+  "author": "Quantum Security Pte. Ltd.",
+  "license": "SEE LICENSE IN LICENSE"
+}

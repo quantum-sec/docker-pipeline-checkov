@@ -1,0 +1,9 @@
+version: "2"
+
+services:
+  service_name:
+    build:
+      context: ./
+    ports:
+      # HTTP
+      - "80:80"

@@ -1,0 +1,33 @@
+trigger:
+  batch: true
+  branches:
+    include:
+      - master
+      - dev
+      - feature/*
+      - fix/*
+
+pr: none
+
+resources:
+  repositories:
+    - repository: pipeline-library
+      type: github
+      endpoint: quantum-sec-github
+      name: quantum-sec/pipeline-library
+
+jobs:
+  - template: templates/jobs/default.yml@pipeline-library
+    parameters:
+      deploySteps:
+        - template: templates/steps/deployment/deploy-container.yml@pipeline-library
+          parameters:
+            name: BuildContainer
+            displayName: Deploy Container to Docker Hub
+            condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+            forceDeploy: true
+            serviceConnectionName: dockerhub-quantumcibot
+            repository: quantumsec/template-docker-container
+            tags: |
+              latest
+              $(SEMVER)
