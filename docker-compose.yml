@@ -4,6 +4,5 @@ services:
   pipeline-checkov:
     build:
       context: ./
-    ports:
-      # HTTP
-      - "80:80"
+    volumes:
+      - ".submodules/terragoat:/workspace/"
