@@ -1,11 +1,11 @@
 {
-  "name": "@quantum-sec/template-docker-container",
+  "name": "@quantum-sec/docker-pipeline-checkov",
   "version": "0.0.0-development",
   "private": true,
-  "description": "{{package_description}}",
+  "description": "Quantum vulnerability management instrumentation for Checkov code analysis pipeline jobs.",
   "repository": {
     "type": "git",
-    "url": "git@github.com:quantum-sec/template-docker-container.git"
+    "url": "git@github.com:quantum-sec/docker-pipeline-checkov.git"
   },
   "author": "Quantum Security Pte. Ltd.",
   "license": "SEE LICENSE IN LICENSE"

@@ -1,3 +1,3 @@
-# template-docker-container
+# docker-pipeline-checkov
 
-{{container_description}}
+Quantum vulnerability management instrumentation for Checkov code analysis pipeline jobs.
