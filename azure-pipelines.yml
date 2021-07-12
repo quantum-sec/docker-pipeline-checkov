@@ -21,12 +21,24 @@ jobs:
       deploySteps:
         - template: templates/steps/deployment/deploy-container.yml@pipeline-library
           parameters:
-            name: BuildContainer
-            displayName: Deploy Container to Docker Hub
+            name: BuildBaseContainer
+            displayName: Deploy Base Container to Docker Hub
             condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
             forceDeploy: true
             serviceConnectionName: dockerhub-quantumcibot
             repository: quantumsec/docker-pipeline-checkov
+            tags: |
+              latest
+              $(SEMVER)
+        - template: templates/steps/deployment/deploy-container.yml@pipeline-library
+          parameters:
+            name: BuildContainer
+            displayName: Deploy Azure DevOps Container to Docker Hub
+            condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+            forceDeploy: true
+            dockerfile: ci/azure/Dockerfile
+            serviceConnectionName: dockerhub-quantumcibot
+            repository: quantumsec/docker-pipeline-checkov-azure
             tags: |
               latest
               $(SEMVER)
