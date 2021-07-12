@@ -3,7 +3,6 @@ trigger:
   branches:
     include:
       - master
-      - dev
       - feature/*
       - fix/*
 

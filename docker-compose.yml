@@ -4,5 +4,6 @@ services:
   pipeline-checkov:
     build:
       context: ./
+    command: npx @quantum-sec/ci-analysis-collector checkov --path /workspace/
     volumes:
       - ".submodules/terragoat:/workspace/"
