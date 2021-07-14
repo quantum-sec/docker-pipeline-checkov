@@ -7,6 +7,10 @@
     "type": "git",
     "url": "git@github.com:quantum-sec/docker-pipeline-checkov.git"
   },
-  "author": "Quantum Security Pte. Ltd.",
-  "license": "SEE LICENSE IN LICENSE"
+  "author": {
+    "name": "Quantum Security Pte. Ltd.",
+    "email": "info@quantum.security",
+    "url": "https://www.quantum.security/"
+  },
+  "license": "Apache-2.0"
 }
