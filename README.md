@@ -32,7 +32,7 @@ Additionally, you can modify `npx`'s `--call` argument to pass additional config
 
 ## Code of Conduct
 
-Help us keep this project open and inclusive. Please read and follow our Code of Conduct.
+Help us keep this project open and inclusive. Please read and follow our [Code of Conduct](https://www.quantum.security/oss/code-of-conduct).
 
 ## License
 
